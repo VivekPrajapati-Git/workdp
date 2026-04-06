@@ -5,9 +5,12 @@ def main():
     pass
 
 @main.command()
-def merge():
-    pass
-
+@click.option("--file1")
+@click.option("--file2")
+def merge(file1,file2):
+    from commands.merge import merge
+    merge(file1,file2)
+    
 @main.command()
 def split():
     pass

@@ -3,4 +3,4 @@ name = "workdp"
 version = "0.1.0"
 
 [project.scripts]
-setfile = "cli:main"
+workdp = "cli:main"
