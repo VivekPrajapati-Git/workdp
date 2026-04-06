@@ -14,6 +14,15 @@ def merge(file1,file2):
     merge(file1,file2)
 
 @main.command()
+@click.argument('file1')
+@click.argument('file2')
+@click.argument('p1')
+@click.argument('p2')
+def mbf(file1,file2,p1,p2):
+    from commands.mergebetweenpdf import mergepdfbetween
+    mergepdfbetween([file1,file2,p1,p2])
+
+@main.command()
 def split():
     pass
 
