@@ -8,9 +8,10 @@ def main():
 
 # Command to merge 2 pdfs
 @main.command(help="Used to merge 2 PDFs")
-@click.option("--file1",help="Path for first file")
-@click.option("--file2", help = "Path for second")
+@click.argument("file1")
+@click.argument("file2")
 def merge(file1,file2):
+    is_file_exists([file1,file2])
     from commands.merge import merge
     merge(file1,file2)
 
