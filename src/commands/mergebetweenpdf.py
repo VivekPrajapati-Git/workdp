@@ -9,13 +9,6 @@ def mergepdfbetween(values):
     page2 = int(values[3])
     writer = PdfWriter()
 
-    if Path.is_file(file1) != True:
-        click.echo("Error : File1 not found")
-        return
-    if Path.is_file(file2) !=True:
-        click.echo("Error : File2 not found")
-        return
-    
     file1_input = open(file1,"rb")
     file2_input = open(file2,"rb")
 
