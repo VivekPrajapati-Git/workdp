@@ -3,10 +3,13 @@ from pathlib import Path
 from PyPDF2 import PdfWriter, PdfReader
 
 def mergepdfbetween(values):
+    # Getting all the values
     file1 = Path(values[0])
     file2 = Path(values[1])
     page1 = int(values[2])
     page2 = int(values[3])
+    
+    # Creating instance and writing the pages
     writer = PdfWriter()
 
     file1_input = open(file1,"rb")

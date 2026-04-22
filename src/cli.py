@@ -15,6 +15,7 @@ def merge(file1,file2):
     from commands.merge import merge
     merge(file1,file2)
 
+# Command to merge pdf from between pages
 @main.command()
 @click.argument('file1')
 @click.argument('file2')
@@ -25,6 +26,7 @@ def mbf(file1,file2,p1,p2):
     from commands.mergebetweenpdf import mergepdfbetween
     mergepdfbetween([file1,file2,p1,p2])
 
+# Command used to split pdf files
 @main.command()
 @click.argument('file')
 @click.argument('Page_number')
