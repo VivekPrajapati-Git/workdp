@@ -23,8 +23,11 @@ def mbf(file1,file2,p1,p2):
     mergepdfbetween([file1,file2,p1,p2])
 
 @main.command()
-def split():
-    pass
+@click.argument('file')
+@click.argument('Page_number')
+def split(file,page_number):
+    from commands.split import splitpdf
+    splitpdf(file,page_number)
 
 @main.command()
 def compress():
